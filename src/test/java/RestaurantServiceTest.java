@@ -4,6 +4,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -33,7 +34,8 @@ class RestaurantServiceTest {
     @Test
     public void searching_for_non_existing_restaurant_should_throw_exception() throws restaurantNotFoundException {
         //WRITE UNIT TEST CASE HERE
-        restaurantNotFoundException e = assertThrows(
+
+         restaurantNotFoundException e = assertThrows(
                 restaurantNotFoundException.class, ()->service.findRestaurantByName("New Restaurant")
         );
         assertEquals(e.getMessage(),"New Restaurant");
@@ -67,4 +69,18 @@ class RestaurantServiceTest {
         assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+    //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Order Total Price>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void get_order_total_given_the_restaurant_name_and_list_of_items(){
+
+        ArrayList<String> itemList = new ArrayList<String>();
+        itemList.add("Sweet corn soup");
+        itemList.add("Vegetable lasagne");
+        assertEquals(388,service.orderTotal("Amelie's cafe",itemList));
+
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Order Total Price>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }

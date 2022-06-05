@@ -17,7 +17,6 @@ public class RestaurantService {
         }
 
         throw new restaurantNotFoundException(restaurantName);
-
     }
 
 
@@ -35,5 +34,19 @@ public class RestaurantService {
 
     public List<Restaurant> getRestaurants() {
         return restaurants;
+    }
+
+
+    public int orderTotal(String restaurantName, ArrayList<String> itemList){
+    /*Order total method
+        Input will be Restaurant name and an ArrayList of item names
+        Output should be the total order value
+
+        Steps:
+        If restaurant exists,
+            -send itemList to restaurant object
+        get itemTotal and return the same
+     */
+        return 0;
     }
 }

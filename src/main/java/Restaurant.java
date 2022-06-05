@@ -65,4 +65,20 @@ public class Restaurant {
         return name;
     }
 
+    public int getOrderPrice(ArrayList<String> itemList){
+        /*
+        Input - ArrayList of items from restaurantService.orderTotal
+        Output - totalPrice of items
+
+        Steps-
+        Loop thru items:
+            If item exists in arrayList menu
+                -getPrice of that item
+                -add it to itemTotal
+        Once all item price is received, return itemTotal
+         */
+
+        return 0;
+    }
+
 }

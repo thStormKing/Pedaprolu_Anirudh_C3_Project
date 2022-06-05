@@ -17,4 +17,12 @@ public class Item {
                 + "\n"
                 ;
     }
+
+    public int getPrice(String name){
+        /*
+        Input item name
+        Output item price
+         */
+        return 0;
+    }
 }
