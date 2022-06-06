@@ -18,11 +18,11 @@ public class Item {
                 ;
     }
 
-    public int getPrice(String name){
+    public int getPrice(){
         /*
-        Input item name
+        Input item name - not required since 1 item will always have 1 price
         Output item price
          */
-        return 0;
+        return price;
     }
 }

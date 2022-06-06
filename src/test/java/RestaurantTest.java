@@ -78,8 +78,7 @@ class RestaurantTest {
 
         ArrayList<String> itemList = new ArrayList<String>();
         itemList.add("Sweet corn soup");
-        itemList.add("Vegetable lasagne");
-        assertEquals(388,restaurant.getOrderPrice(itemList));
+        assertEquals(119,restaurant.getOrderPrice(itemList));
 
     }
     //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Item Price>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

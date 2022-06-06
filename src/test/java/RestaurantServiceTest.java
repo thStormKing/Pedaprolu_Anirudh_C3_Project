@@ -1,8 +1,4 @@
-import net.bytebuddy.asm.Advice;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mockito;
-
 import java.time.LocalTime;
 import java.util.ArrayList;
 
@@ -74,7 +70,7 @@ class RestaurantServiceTest {
 
     //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Order Total Price>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     @Test
-    public void get_order_total_given_the_restaurant_name_and_list_of_items(){
+    public void get_order_total_given_the_restaurant_name_and_list_of_items() throws restaurantNotFoundException {
 
         ArrayList<String> itemList = new ArrayList<String>();
         itemList.add("Sweet corn soup");

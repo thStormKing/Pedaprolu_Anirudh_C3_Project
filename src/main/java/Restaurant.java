@@ -78,7 +78,14 @@ public class Restaurant {
         Once all item price is received, return itemTotal
          */
 
-        return 0;
+        int itemTotal = 0;
+
+        // Loop thru the itemList, get the item price and add it to the order total
+        for(String s:itemList){
+            itemTotal = itemTotal + findItemByName(s).getPrice();
+        }
+
+        return itemTotal;
     }
 
 }

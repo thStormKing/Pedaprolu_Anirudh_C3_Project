@@ -37,7 +37,7 @@ public class RestaurantService {
     }
 
 
-    public int orderTotal(String restaurantName, ArrayList<String> itemList){
+    public int orderTotal(String restaurantName, ArrayList<String> itemList) throws restaurantNotFoundException {
     /*Order total method
         Input will be Restaurant name and an ArrayList of item names
         Output should be the total order value
@@ -47,6 +47,11 @@ public class RestaurantService {
             -send itemList to restaurant object
         get itemTotal and return the same
      */
-        return 0;
+        int orderTotal = 0;
+
+        // Find the restaurant, pass item list to get the total price and store the order total
+        orderTotal = findRestaurantByName(restaurantName).getOrderPrice(itemList);
+
+        return orderTotal;
     }
 }
